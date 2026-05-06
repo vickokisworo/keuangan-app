@@ -1,0 +1,15 @@
+/vendor
+/runtime/*
+/web/assets/*
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+.env
+tests/
+vagrant/
+Vagrantfile
+README.md
+LICENSE.md
+.idea
+.vscode
