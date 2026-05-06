@@ -1,0 +1,186 @@
+:root {
+    --primary: #0056D2;
+    --primary-light: #ddeeff;
+    --success: #059669;
+    --danger: #dc2626;
+    --info: #2188FF;
+    --bg-body: #f1f5f9;
+    --text-main: #0c1f33;
+    --text-muted: #4a6a85;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+    --header-bg: #0056D2;
+    --header-text: #ffffff;
+}
+
+html {
+    background-color: var(--bg-body);
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-size: 15px;
+    letter-spacing: -0.01em;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Header Branding & Desktop Nav */
+.navbar {
+    background-color: var(--bg-body) !important;
+    border-bottom: none;
+    box-shadow: none;
+    padding: 1rem 0;
+}
+
+/* Page header bar (custom block) */
+.bg-white.border-bottom.shadow-sm {
+    background: linear-gradient(135deg, #003fa3 0%, #0056D2 100%) !important;
+    border-bottom: none !important;
+    box-shadow: 0 4px 20px rgba(0, 56, 163, 0.4) !important;
+    min-height: 110px;
+    height: auto;
+}
+
+.bg-white.border-bottom.shadow-sm > .container {
+    min-height: 110px;
+    height: auto;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.bg-white.border-bottom.shadow-sm > .container > .row {
+    min-height: 110px;
+    height: auto;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    color: var(--text-main) !important;
+    font-size: 1.4rem;
+    letter-spacing: -1px;
+}
+
+.navbar-brand i {
+    color: var(--primary);
+}
+
+.navbar-toggler {
+    display: none !important; /* Hapus burger menu karena navigasi pindah ke bawah */
+}
+
+.nav-link {
+    font-weight: 600;
+    color: rgba(255,255,255,0.75) !important;
+    padding: 0.5rem 1.25rem !important;
+    margin: 0 2px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    opacity: 1;
+}
+
+.nav-link.active,
+.nav-pills .nav-link.active {
+    color: #ffffff !important;
+    background-color: transparent !important;
+    font-weight: 700 !important;
+}
+
+.nav-link.active:hover,
+.nav-pills .nav-link.active:hover {
+    background-color: transparent !important;
+    cursor: default;
+}
+
+/* Main Bottom Navigation Bar (Mobile Only) */
+.main-bottom-nav {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--border-color);
+    display: none; /* Default hidden on desktop */
+    justify-content: space-around;
+    padding: 8px 0;
+    z-index: 1050;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.main-bottom-nav a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    padding: 6px 0;
+    flex: 1;
+}
+
+.main-bottom-nav a i {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+}
+
+.main-bottom-nav a.active {
+    color: var(--primary);
+}
+
+/* Tablet & Mobile tweaks */
+@media (max-width: 768px) {
+    body {
+        padding-bottom: calc(100px + env(safe-area-inset-bottom));
+    }
+    
+    .navbar-nav {
+        display: none !important; /* Sembunyikan menu atas di mobile */
+    }
+
+    .main-bottom-nav {
+        display: flex; /* Tampilkan menu bawah di mobile */
+        padding-bottom: calc(8px + env(safe-area-inset-bottom));
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+}
+
+/* Page Header - teks putih karena bg biru gelap */
+.bg-white.border-bottom.shadow-sm h1,
+.bg-white.border-bottom.shadow-sm h2,
+.bg-white.border-bottom.shadow-sm h3,
+.bg-white.border-bottom.shadow-sm h4,
+.bg-white.border-bottom.shadow-sm h5,
+.bg-white.border-bottom.shadow-sm h6,
+.bg-white.border-bottom.shadow-sm p,
+.bg-white.border-bottom.shadow-sm .text-muted,
+.bg-white.border-bottom.shadow-sm .fw-bold {
+    color: #ffffff !important;
+}
+
+/* Cards & Elements */
+.card {
+    border: 1px solid var(--border-color);
+    border-radius: 0 !important;
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+.btn {
+    border-radius: 14px;
+    padding: 0.8rem 1.6rem;
+}
